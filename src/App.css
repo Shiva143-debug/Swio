@@ -1,0 +1,455 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+.transactions-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.transaction-card {
+  background-color: rgb(223, 228, 231);
+  border: 1px solid #c9b7b7;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 30px;
+  flex: 1 0 300px; /* Flex item will grow to fill the container, but won't shrink below 300px */
+  max-width: calc(33.333% - 16px); /* Three cards per row with margin */
+}
+
+.name {
+  font-weight: bold;
+}
+
+.amount {
+  margin-top: 8px;
+}
+
+
+.card1{
+  border-radius: 16px;
+  background-color: rgb(13, 29, 83);
+  width: 600px;
+  height:400px;
+  display: flex;
+   justify-content: space-around;
+   align-items:center;
+   padding: 20px;
+   margin: 15px;
+}
+
+
+.card2{
+  border-radius: 16px;
+  background-color: rgb(41, 59, 44);
+  width: 600px;
+  height:400px;
+  display: flex;
+   justify-content: space-around;
+   align-items:center;
+   padding: 20px;
+   margin: 15px;
+   
+}
+
+
+
+.card1-image-container {
+  position: relative;
+  display: inline-block;
+  margin-right: 200px;
+  margin-bottom: 150px;
+
+  z-index: 1;
+ 
+}
+
+.image1, .image2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(5deg); /* Slightly rotate to the right */
+}
+
+.image1 {
+  z-index: 1; 
+  width: 200px;
+  
+}
+
+.image2 {
+  width: 200px;
+  z-index: 2; 
+  left: 50px;
+  top:80px
+}
+
+.image3 {
+ 
+  transform: rotate(-20deg);
+  left: 10px; 
+}
+
+.image-container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: max-content; 
+  gap: 20px; 
+  margin-left: 200px;
+}
+
+.image-container img {
+  position: relative;
+}
+
+.img{
+  width: 100px;
+  height: 100px;
+}
+
+
+
+.img1 {
+  z-index: 1;
+  width: 100px;
+  height: 100px;
+}
+
+.img2 {
+  z-index: 2;
+  left: -40px; 
+  width: 104px;
+  height: 104px;
+}
+
+.img3 {
+  z-index: 3;
+  left: -80px; 
+  width: 110px;
+  height: 110px;
+}
+
+.img4 {
+  z-index: 4;
+  left: -120px; 
+  width: 115px;
+  height: 115px;
+}
+
+.img5 {
+  z-index: 5;
+  left: -160px; 
+  width: 120px;
+  height: 120px;
+}
+
+.img6 {
+  z-index: 4; /* Make img6 appear behind img5 */
+  left: -200px;
+  width: 115px;
+  height: 115px;
+ 
+}
+
+.img7 {
+  z-index: 3; 
+  left: -240px; 
+  width: 110px;
+  height: 110px;
+}
+
+.img9 {
+  z-index: 2; 
+  left: -280px; 
+  width: 104px;
+  height: 104px;
+}
+
+.img8 {
+  z-index: 1; 
+  left: -320px; 
+  width: 100px;
+  height: 100px;
+}
+
+.card-spotify{
+  background-color: rgb(34, 77, 34);
+  width: 600px;
+  border-radius: 16px;
+  padding: 20px;
+  margin: 10px;
+}
+.card-cs{
+  background-color:rgb(105, 35, 35);
+  
+  width: 600px;
+  border-radius: 16px;
+  padding: 20px;
+  margin: 10px;
+}
+
+.main-card{
+  background-color: #61dafb;
+  background-image: linear-gradient(to top,#71b357,rgb(83, 136, 196));
+  width: 95vw;
+  height:60vh;
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.card-image1{
+  position: relative;
+  width:150px;
+
+  height:200px;
+  border-radius: 16px;
+  left:-20px
+}
+.card-image2{
+  width:150px;
+  height:150px;
+  border-radius: 16px;
+  margin: 10px;
+}
+
+.card-image3{
+  width:200px;
+  height:200px;
+  border-radius: 16px;
+}
+
+
+.card-image4{
+  position: relative;
+  
+  width:250px;
+  height:250px;
+  border-radius: 16px;
+  right: -35px;
+}
+
+
+.text-overlay {
+  position: absolute;
+  top: 190px; 
+  left: 35px; 
+  color: white; 
+  background-color: rgba(0, 0, 0, 0.5); 
+  padding: 10px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 16px;
+  
+  
+
+}
+
+.text-overlay h5, .text-overlay h6 {
+  margin: 0px 0; /* Adjust as needed */
+}
+
+.image-cs-container {
+  position: relative;
+  display: inline-block; 
+  /* overflow: hidden; */
+}
+
+.images-cs-1 {
+  position: relative;
+  z-index: 1;
+}
+
+.images-cs-2 {
+  position: absolute;
+  transform: rotate(-10deg) scale(1.05);
+  top:15px;
+   left: 35px;
+  z-index: 0; 
+  width:190px
+  }
+
+ 
+  .images-sp-2 {
+    position: absolute;
+    transform: rotate(-10deg) scale(1.05);
+    top:65px;
+     left: 45px;
+    z-index: 0; 
+    width:200px
+    }
+
+
+  .images-3-container{
+      position: relative;
+      width: max-content; 
+  }
+  
+  .pic {
+      position: absolute;
+      top: 0;
+      
+  }
+  
+  .img-1 {
+      z-index: 1;
+      left: 0;
+  }
+  
+  .img-2 {
+      z-index: 2;
+      left:50px ;
+      top:5px
+  }
+  
+  .img-3 {
+      z-index: 3;
+      left: 100px;
+      top:10px
+  }
+
+  /* .scroll-div {
+    height: 100vh; 
+    overflow-y: auto; 
+    overflow-x: hidden;
+    background-color: yellow;
+    
+} */
+
+.c-image{
+  margin-bottom: 50px;
+  border-radius: 8px;
+  
+}
+
+/* .right{
+  background-image: linear-gradient(to right,red,blue);
+  padding: 50px;
+  position: relative;
+  z-index: 1;
+  border-radius: 16px;
+  
+} */
+.image-stack {
+  position: relative;
+}
+
+
+
+.image-stack2 {
+  position: relative;
+}
+
+
+.c-image-10 {
+  position: relative;
+  z-index: 3;
+}
+
+.c-image-11 {
+  position: absolute;
+  top: 50px; 
+  left: 50px;
+  z-index: 2;
+}
+
+.c-image-12 {
+  position: absolute;
+  top: 200px; 
+  left: 100px;
+  z-index: 1;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.container-v {
+  background: url('https://res.cloudinary.com/dxgbxchqm/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1716125604/bg-image_ax6scv.jpg') no-repeat center center fixed;
+  background-size: cover;
+  /* overflow-y: auto; */
+  height: 100%;
+  border-radius: 16px;
+  width:500px;
+}
+
+.rightside {
+  padding: 20px;
+}
+
+.right {
+  padding: 20px;
+  border-radius: 10px; /* Optional: Add some rounding to the corners */
+}
+.c-image4{
+  width: 400px;
+  height: 200px;
+}
+
+.c-image5{
+  width: 400px;
+  height: 200px;
+}
+.c-image-8{
+  width: 400px;
+  height: 200px;
+}
+.c-image-9{
+  width: 400px;
+  height: 200px;
+}
+
+.c-image-8 {
+  position: relative;
+  z-index: 2;
+}
+
+.c-image-9 {
+  position: absolute;
+  top: 150px; 
+  left: 50px;
+  z-index: 1;
+}
