@@ -15,11 +15,11 @@ const Payment = ({onCancel}) => {
     const navigate = useNavigate();
     const handleSubmit = (event) => {
 
-        const transactionId = Date.now();
+        const transaction = Date.now();
         event.preventDefault();
 
         // Navigate to the TransactionDetails component with the necessary state
-        navigate('/transaction-details', { state: { name, amount, transactionId } });
+        navigate('/transaction-details', { state: { name, amount, transaction } });
 
     }
 

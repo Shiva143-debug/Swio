@@ -7,16 +7,16 @@ import axios from 'axios';
 const TransactionDetails = () => {
     const location = useLocation();
     const navigate = useNavigate();
-    const { name, amount, transactionId } = location.state || {};
+    const { name, amount, transaction } = location.state || {};
 
     const handlePayment = (event) => {
         event.preventDefault()
     
-        const values ={name, amount, transactionId }
+        const values ={name, amount, transaction }
         
 
-        axios.post("http://localhost:8001/create-payment", values)
-        // axios.post("https://ablaze-brassy-umbrella.glitch.me/create-payment", values)
+        // axios.post("http://localhost:8001/create-payment", values)
+        axios.post("https://invited-sweet-alphabet.glitch.me/create-payment", values)
         .then(res => {
             console.log(res);
             // toast.current.show({ severity: 'success', summary: 'Success', detail: 'Customer added successfully' });
@@ -58,12 +58,13 @@ const TransactionDetails = () => {
             </div>
             <div style={{display:"flex"}} class="mb-5">
             <label class="col-4" style={{color:"navy",fontWeight:"bold"}}>Transaction ID:  </label>
-            <input  class="form-control" type="text" name="name" value={transactionId}  disabled />
+            <input  class="form-control" type="text" name="name" value={transaction}  disabled />
             </div>
             
             <div class="d-flex justify-content-between">
-            <button onClick={handlePayment} class="btn btn-success" style={{ alignSelf: "center",float:"left"}}>Proceed to Payment</button>
             <button onClick={onBack} class="btn btn-primary">Back</button>
+            <button onClick={handlePayment} class="btn btn-success" >Proceed to Payment</button>
+            
             </div>
             </div>
         </div>

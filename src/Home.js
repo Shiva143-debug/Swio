@@ -72,7 +72,7 @@ const Home = () => {
         <h2 style={{ fontWeight: "bold", fontSize: "42px" }}>Themes. Unlimited themes.</h2>
         <p style={{ maxWidth: "1200px", fontSize: "28px", textAlign: 'center' }}>Themes in Sleeve make creating and switching between customizations easy. Share your own creations with friends and install as many themes as you like with just a double-click.</p>
 
-        <div className='main-card'>
+        <div className='main-card' style={{width:"85%",height:"350px"}}>
           <div style={{ display: "flex", flexDirection: "column" }}>
             <img src="/images/card-image1.jpg" alt="2" className='card-image1' />
             <h5>Eternal Sunshine</h5>
@@ -261,7 +261,7 @@ const Home = () => {
       </div> */}
 
 
-<div class="d-flex justify-content-around" style={{ marginTop: "100px", marginBottom: "50px" }}>
+<div class="m-container d-flex justify-content-around" style={{ marginTop: "100px", marginBottom: "50px" }}>
         <div className='leftside d-flex flex-column ' >
           <div className='left d-flex flex-column mb-5 pb-2'>
             <img src="/images/img9.png" alt=" 7" className="img img9" />
@@ -298,7 +298,7 @@ const Home = () => {
               <img src="/images/img8.png" alt=" 7" className="c-imagepic img-3" />
             </div>
 
-            <h1 class="pb-2 pt-2">Settings</h1>
+            <h1 class="pb-2 pt-2" style={{ marginTop: "150px" }}>Settings</h1>
             <p class="pb-2" style={{ maxWidth: "350px", fontSize: "24px" }}>Decide if Sleeve stays out of the way, behind windows, or in front of them — or only when you need to see it.</p>
             <p class="pb-2" style={{ maxWidth: "350px", fontSize: "24px" }}>Show it in the Dock, choose from custom icons, or keep it on the Desktop only.</p>
             <p class="pb-2" style={{ maxWidth: "350px", fontSize: "24px" }}>Set your custom keyboard shortcuts and integrate with the apps you use.</p>
@@ -328,7 +328,7 @@ const Home = () => {
               </div>
             </div>
 
-            <div className='right d-flex flex-column mb-5' style={{ marginTop: "100px" }}>
+            <div className='right d-flex flex-column' style={{ marginTop: "100px" }}>
               <div className="image-stack2">
                 <img src="/images/c-image10.jpg" alt=" 7" className="c-image c-image-10" />
                 <img src="/images/c-image11.jpg" alt=" 7" className="c-image c-image-11" />
@@ -365,7 +365,7 @@ const Home = () => {
 
         </div>
 
-        <div style={{ display: "flex", border: "1px solid #282c34", backgroundColor: "#282c34", width: "95vw", borderRadius: "16px", padding: "20px", marginBottom: "20px" }}>
+        <div style={{ display: "flex", border: "1px solid #282c34", backgroundColor: "#282c34", width: "85vw", borderRadius: "16px", padding: "20px", marginBottom: "20px" }}>
 
           <img src="/images/song1.png" alt="song1" style={{ width: "100px", marginLeft: "10px" }} />
           <img src="/images/song2.png" alt="song1" style={{ width: "100px", marginLeft: "10px" }} />

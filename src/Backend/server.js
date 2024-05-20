@@ -1,29 +1,35 @@
+// I have Deployed the backend code in glitch
+
 const express = require('express');
-// const Stripe = require('stripe');
-const mysql=require('mysql');
+const { Pool } = require('pg');
+const cors = require('cors')
 const bodyParser = require('body-parser');
-const cors = require('cors');
 
-const app = express();
-// const stripe = new Stripe('your-secret-key-here');
 
+
+
+const app = express()
+app.use(cors())
+app.use(express.json())
 app.use(bodyParser.json());
-app.use(cors());
 
-const db= mysql.createConnection({
-    host:"127.0.0.1",
-    user:"root",
-    password:"",
-    database:'test'
-})
+const pool = new Pool({
+    user: 'oss_admin',
+    host: '148.72.246.179',
+    database: 'expense',
+    password: 'Latitude77',
+    schema:"public",
+    port: '5432', 
+});
+
 
 app.post('/create-payment', async (req, res) => {
-    const { name, amount, transactionId } = req.body;
-    const sql = "INSERT INTO payment (name,amount,transactionId) VALUES (?,?,?)";
-    const values = [name, amount, transactionId];
+    const { name, amount, transaction } = req.body;
+    const sql = "INSERT INTO payment (name,amount,transaction) VALUES ($1, $2, $3)";
+    const values = [name, amount, transaction];
     console.log("Inserting values into payment table:", values);
 
-    db.query(sql, values, (err, result) => {
+    pool.query(sql, values, (err, result) => {
         if (err) {
             console.error("Error inserting data into payment table:", err);
             return res.status(500).json({ error: "Error inserting data into payment table" });
@@ -35,17 +41,14 @@ app.post('/create-payment', async (req, res) => {
 
 app.get('/getpayment',(req,res)=>{
     const sql="SELECT  * FROM payment";
-    db.query(sql,(err,data)=>{
+    pool.query(sql,(err,data)=>{
         // console.log(err);
         // console.log(data);
         if(err) return res.json(err);
-        return res.json(data)
+        return res.json(data.rows)
     })
     
 })
 
-app.listen(8001, () => {
-  console.log('Server is running on port 8001');
-});
-
+app.listen(process.env.PORT || 4000,()=>console.log("server on "+process.env.PORT))
 
